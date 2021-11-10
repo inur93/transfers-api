@@ -17,7 +17,6 @@ export class ApiKeyService {
             prefix
         });
 
-        console.log('created', created);
         return {
             ...created.toObject(),
             apiKey: key

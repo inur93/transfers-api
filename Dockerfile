@@ -1,4 +1,4 @@
-FROM node:14.9.0-alpine as builder
+FROM node:16.9.0-alpine as builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY . .
 RUN yarn run build
 
 # production
-FROM nginx:stable-alpine as production
+FROM node:16.9.0-alpine as production
 
 RUN mkdir -p /home/node && chown -R node:node /home/node
 

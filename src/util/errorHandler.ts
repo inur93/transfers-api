@@ -23,7 +23,6 @@ export function errorHandler(
             details: err?.fields,
         });
     }
-    console.log('err', err);
     if (err instanceof Error) {
         return res.status(500).json({
             message: "Internal Server Error",

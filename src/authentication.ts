@@ -7,7 +7,6 @@ import security from "./util/security";
 
 async function handleApiToken(request: express.Request): Promise<any> {
     const token = request.headers['x-api-key'] as string || '';
-    console.log('headers', request.headers);
     if (!token) {
         throw new MissingApiKeyException();
     }

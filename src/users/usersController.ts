@@ -1,5 +1,4 @@
 import { inject } from 'inversify';
-import * as express from 'express';
 import {
     Body,
     Controller,
@@ -8,7 +7,6 @@ import {
     Post, Response, Route,
     Security,
     SuccessResponse,
-    Request,
     Tags
 } from "tsoa";
 import { UnauthorizedException } from '../exceptions/unauthorized';
@@ -38,11 +36,7 @@ export class UsersController extends Controller {
      * @param userId the unique id of the user
      */
     @Get("{userId}")
-    public async getUser(
-        @Path() userId: string,
-        @Request() request: express.Request
-    ): Promise<GetUser> {
-        console.log('request', request);
+    public async getUser(@Path() userId: string): Promise<GetUser> {
         return mapper.toGetUser(await this.userService.get(userId));
     }
 

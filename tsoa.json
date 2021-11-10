@@ -34,7 +34,19 @@
                 "scheme": "bearer",
                 "bearerFormat": "JWT"
             }
-        }
+        },
+        "tags": [
+            {
+                "name": "Transfers",
+                "description": "You need an API key to access these endpoints."
+            },
+            {
+                "name": "Admin"
+            },
+            {
+                "name": "Api key management"
+            }
+        ]
     },
     "routes": {
         "routesDir": "build",

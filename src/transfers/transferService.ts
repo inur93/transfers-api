@@ -17,7 +17,7 @@ export class TransfersService {
 
         return {
             count,
-            data: rows
+            data: rows.map(x => x.toObject())
         }
     }
 

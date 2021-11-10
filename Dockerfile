@@ -8,7 +8,7 @@ RUN yarn install --frozen-lockfile
 
 COPY . .
 
-RUN yarn run build
+RUN yarn build
 
 # production
 FROM node:16.9.0-alpine as production
@@ -34,4 +34,4 @@ COPY --chown=node:node --from=builder /app/build ./server
 EXPOSE 80
 EXPOSE 443
 
-CMD ["node", "./server/server.js"]
+CMD ["node", "./server/src/server.js"]

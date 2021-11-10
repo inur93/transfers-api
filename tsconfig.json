@@ -27,7 +27,7 @@
 
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "esModuleInterop": true,
     /* in order to dynamically import json files */
     "resolveJsonModule": true,

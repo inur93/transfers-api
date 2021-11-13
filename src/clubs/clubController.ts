@@ -5,19 +5,19 @@ import {
     Get, Query, Route, Security, Tags
 } from "tsoa";
 import { provideSingleton } from '../util/provideSingleton';
-import { TransfersService } from "./transferService";
-import { FindTransfer } from "./transferViewModels";
+import { ClubService } from "./clubService";
 import { PagedList } from "../common/pagedList";
+import { FindClub } from "./clubViewModels";
 
 
 @Tags('Common')
 @Security('api_key')
-@Route("transfers")
-@provideSingleton(TransfersController)
-export class TransfersController extends Controller {
+@Route("clubs")
+@provideSingleton(ClubController)
+export class ClubController extends Controller {
 
     constructor(
-        @inject(TransfersService) private service: TransfersService
+        @inject(ClubService) private service: ClubService
     ) {
         super();
     }
@@ -35,14 +35,14 @@ export class TransfersController extends Controller {
      * @maximum limit 1000
      */
     @Get("")
-    public async findTransfers(
+    public async findClubs(
         @Query() page: number,
         @Query() limit: number
-    ): Promise<PagedList<FindTransfer>> {
+    ): Promise<PagedList<FindClub>> {
         const pagedResults = await this.service.find({ page, limit });
         return {
             count: pagedResults.count,
-            data: pagedResults.data.map(mapper.toFindTransfer)
+            data: pagedResults.data.map(mapper.toFindClub)
         }
     }
 

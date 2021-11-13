@@ -1,4 +1,4 @@
-import { Money } from "../../transfers/money";
+import { Money } from "./money";
 
 /**
  * @example {
@@ -6,19 +6,19 @@ import { Money } from "../../transfers/money";
  *  "tmId": "1234",
  *  "date": "2021-11-03T00:00:00.000Z",
  *  "transferLink": "https://www.transfermarkt.com/pione-sisto/transfers/spieler/252641/transfer_id/3046446",
- *  marketValue: {
+ *  "marketValue": {
  *      "currency": "€",
  *      "amount": 1000000,
  *      "comment": "free transfer"
  *  },
- *  fee: {
+ *  "fee": {
  *      "currency": "€",
  *      "amount": 2000000,
  *      "comment": "not disclosed"
  *  },
- *  fromClub: "123",
- *  toClub: "321",
- *  player: "1423"
+ *  "fromClub": "123",
+ *  "toClub": "321",
+ *  "player": "1423"
  * }
  */
 export interface FindTransfer {

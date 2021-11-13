@@ -16,6 +16,8 @@ export interface Player {
     citizenShip: string;
     position: string[];
     currentClub: string;
+    currentClubName: string;
+    link: string
 }
 
 const PlayerSchemaFields: Record<keyof Omit<Player, '_id'>, any> = {
@@ -32,7 +34,9 @@ const PlayerSchemaFields: Record<keyof Omit<Player, '_id'>, any> = {
     nationality: String,
     citizenShip: String,
     position: [String],
-    currentClub: String
+    currentClub: String,
+    currentClubName: String,
+    link: String
 }
 
 export interface PlayerDoc extends Omit<Player, '_id'>, Document { }

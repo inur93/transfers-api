@@ -13,9 +13,8 @@ import { UnauthorizedException } from '../exceptions/unauthorized';
 import { UserAlreadyExistsException } from '../exceptions/userAlreadyExists';
 import mapper from '../util/mapper';
 import { provideSingleton } from '../util/provideSingleton';
-import { CreateUser } from "../viewModels/users/createUser";
-import { GetUser } from '../viewModels/users/getUser';
 import { UsersService } from "./usersService";
+import { CreateUser, GetUser } from './userViewModels';
 
 
 @Security("jwt", ['Admin'])

@@ -37,7 +37,7 @@
         },
         "tags": [
             {
-                "name": "Transfers",
+                "name": "Common",
                 "description": "You need an API key to access these endpoints."
             },
             {

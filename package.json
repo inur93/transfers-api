@@ -1,8 +1,13 @@
 {
+  "author": {
+    "name": "Rúni Egholm Vørmadal",
+    "email": "runi@vormadal.com"
+  },
+  "license": "MIT",
   "main": "build/src/server.js",
   "scripts": {
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
-    "dev:docker": "concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
+    "dev:docker": "tsoa spec-and-routes && concurrently \"nodemon\" \"nodemon -x tsoa spec-and-routes\"",
     "build": "tsoa spec-and-routes && tsc",
     "start": "node build/src/server.js"
   },

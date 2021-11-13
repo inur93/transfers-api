@@ -2,8 +2,8 @@ import { UserAlreadyExistsException } from "../exceptions/userAlreadyExists";
 import { } from '../inversify/ioc';
 import { provideSingleton } from "../util/provideSingleton";
 import security from "../util/security";
-import { CreateUser } from "../viewModels/users/createUser";
 import UserModel, { User } from "./user";
+import { CreateUser } from "./userViewModels";
 
 @provideSingleton(UsersService)
 export class UsersService {

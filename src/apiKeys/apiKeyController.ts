@@ -8,9 +8,9 @@ import {
     Post, Request, Response, Route, Security, SuccessResponse, Tags
 } from "tsoa";
 import { UnauthorizedException } from '../exceptions/unauthorized';
+import { GetUser } from '../users/userViewModels';
 import mapper from '../util/mapper';
 import { provideSingleton } from '../util/provideSingleton';
-import { GetUser } from '../viewModels/users/getUser';
 import { ApiKeyService } from './apiKeyService';
 import { CreateApiKey } from './createApiKey';
 import { GetApiKey } from './getApiKey';

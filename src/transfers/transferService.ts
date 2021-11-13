@@ -1,5 +1,5 @@
+import { PagedList } from "../common/pagedList";
 import { provideSingleton } from "../util/provideSingleton";
-import { PagedList } from "../viewModels/pagedList";
 import TransferModel, { Transfer } from './transfer';
 import { TransferQuery } from "./transferQueries";
 

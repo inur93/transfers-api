@@ -24,8 +24,9 @@ export function errorHandler(
         });
     }
     if (err instanceof Error) {
+        const isDebug = process.env.DEBUG_MODE;
         return res.status(500).json({
-            message: "Internal Server Error",
+            message: isDebug ? err : "Internal Server Error",
             code: "internal_server_error",
         });
     }

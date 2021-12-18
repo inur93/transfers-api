@@ -23,6 +23,7 @@ export function errorHandler(
             details: err?.fields,
         });
     }
+    
     if (err instanceof Error) {
         const isDebug = process.env.DEBUG_MODE;
         return res.status(500).json({

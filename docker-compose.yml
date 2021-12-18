@@ -41,8 +41,8 @@ services:
       DEFAULT_ADMIN_EMAIL: admin@vormadal.com
       DEFAULT_ADMIN_PASSWORD: example
       JWT_SECRET: should-be-very-secret
-      INIT_DATA: true
-      DEBUG_MODE: true
+      INIT_DATA: "true"
+      DEBUG_MODE: "true"
     ports:
       - 8000:8000
       - 9229:9229
